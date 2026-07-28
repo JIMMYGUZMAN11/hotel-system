@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../config/conexion.php';
 require_once __DIR__ . '/../config/funciones.php';
+require_once __DIR__ . '/../config/auth.php';
+requerirLoginApi();
 
 $metodo = $_SERVER['REQUEST_METHOD'];
 $estadosValidos = ['Disponible', 'Ocupada', 'Mantenimiento'];

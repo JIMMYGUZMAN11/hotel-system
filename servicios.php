@@ -1,4 +1,4 @@
-<?php $pagina = 'servicios'; ?>
+<?php require_once __DIR__ . '/config/auth.php'; requerirLogin(); $pagina = 'servicios'; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

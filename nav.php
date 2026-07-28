@@ -1,5 +1,9 @@
 <header class="topbar">
     <h1>🏨 Sistema de Gestion Hotelera</h1>
+    <div class="sesion-info">
+        <span>👤 <?= htmlspecialchars(usuarioActual() ?? '') ?></span>
+        <a href="logout.php" class="btn-salir">Cerrar sesion</a>
+    </div>
 </header>
 <nav class="menu">
     <a href="index.php" class="<?= $pagina === 'index' ? 'activo' : '' ?>">Inicio</a>

@@ -96,6 +96,22 @@ CREATE TABLE gasto (
         ON UPDATE CASCADE ON DELETE RESTRICT
 ) ENGINE=InnoDB;
 
+-- ---------------------------------------------------------
+-- TABLA: usuario (login del sistema)
+-- ---------------------------------------------------------
+CREATE TABLE usuario (
+    id_usuario      INT AUTO_INCREMENT PRIMARY KEY,
+    usuario         VARCHAR(50) NOT NULL UNIQUE,
+    password_hash   VARCHAR(255) NOT NULL,
+    nombre          VARCHAR(100) NOT NULL,
+    fecha_creacion  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+-- Usuario por defecto: usuario "admin", contraseña "admin123"
+-- IMPORTANTE: cambia esta contraseña despues del primer ingreso.
+INSERT INTO usuario (usuario, password_hash, nombre) VALUES
+('admin', '$2b$10$zpJ5OEF3I3tFSGWIGyatQOgCzRTZ1NyiZac5nY/Ty2sWmD2T/ioqq', 'Administrador');
+
 -- =========================================================
 -- DATOS DE PRUEBA
 -- =========================================================

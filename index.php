@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/config/conexion.php';
+require_once __DIR__ . '/config/auth.php';
+requerirLogin();
 $pagina = 'index';
 
 $totalClientes    = $pdo->query('SELECT COUNT(*) FROM cliente')->fetchColumn();
