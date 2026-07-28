@@ -4,10 +4,10 @@
  * Ajusta $host, $db, $user, $pass segun tu entorno local (XAMPP: user=root, pass='')
  */
 
-$host    = getenv('DB_HOST') ?: 'localhost';
-$db      = getenv('DB_NAME') ?: 'hotel_db';
-$user    = getenv('DB_USER') ?: 'root';
-$pass    = getenv('DB_PASS') ?: '';
+$host    = getenv('DB_HOST') ?: 'boo5nkwv1v9klykkbmn0-mysql.services.clever-cloud.com';
+$db      = getenv('DB_NAME') ?: 'boo5nkwv1v9klykkbmn0';
+$user    = getenv('DB_USER') ?: 'uyhrg2gpoupboipp';
+$pass    = getenv('DB_PASS') ?: 'UY4biUhQtxhDHfGDo45W';
 $port    = getenv('DB_PORT') ?: '3306';
 $charset = 'utf8mb4';
 
